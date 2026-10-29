@@ -1,0 +1,7 @@
+!.gitignore
+/out/*
+/papers/*
+/private/*
+!out/.gitkeep 
+!papers/.gitkeep 
+!private/.gitkeep 

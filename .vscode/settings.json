@@ -1,0 +1,41 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.internal.synctex.afterBuild.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-f",
+                "-outdir=out",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.reviewSelection.enabled": false,
+    "github.copilot.advanced": {},
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.nextEditSuggestions.fixes": false
+}

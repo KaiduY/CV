@@ -1,0 +1,68 @@
+% style.sty - LaTeX style package for mathematics and physics documents
+% Provides consistent formatting, theorem environments, and package setup
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style}[2025/12/07 Physics - Mathematics Style Package]
+
+% ============================================================================
+% Layout and Geometry
+% ============================================================================
+\RequirePackage[a4paper,margin=1in]{geometry}
+
+% ============================================================================
+% Mathematics and Symbols
+% ============================================================================
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+
+% ============================================================================
+% Physics
+% ============================================================================
+\RequirePackage{physics}
+
+% ============================================================================
+% Graphics and Figures
+% ============================================================================
+\RequirePackage{graphicx}
+\RequirePackage{float}
+
+% ============================================================================
+% Tables
+% ============================================================================
+\RequirePackage{booktabs}
+\RequirePackage{array}
+
+% ============================================================================
+% Typography
+% ============================================================================
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+
+% ============================================================================
+% Hyperlinks
+% ============================================================================
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% ============================================================================
+% Bibliography
+% ============================================================================
+\RequirePackage[authoryear,sort&compress]{natbib}
+
+% ============================================================================
+% Theorem Environments
+% ============================================================================
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+\endinput
