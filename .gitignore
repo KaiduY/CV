@@ -5,3 +5,4 @@
 !out/.gitkeep 
 !papers/.gitkeep 
 !private/.gitkeep 
+*.DS_Store
