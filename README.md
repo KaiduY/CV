@@ -1,71 +1,37 @@
-# LaTeX Paper Template
+[Download the latest version of my CV (PDF)](out/main.pdf)
 
-A clean, lightweight LaTeX template for writing **mathematics and physics papers**.
+# Alexandru-Georgian Oprea — CV
 
-## 📁 Structure
+This repository contains the LaTeX source for my curriculum vitae. The CV is
+typeset with a customized version of the Russell CV class, using a clean,
+single-column layout and Roboto fonts.
 
-```text
-.
-├── main.tex        # Main LaTeX document
-├── style.sty       # Custom commands and formatting
-├── ref.bib         # Bibliography
-├── papers/         # Paper source files / drafts
-├── private/        # Private or local files
-├── out/            # Generated output
-└── .vscode/        # VS Code configuration
-```
+## For readers
 
-## 🚀 Getting Started
+Use the PDF link at the top of this page to view or download my CV.
 
-Clone the repository and open `main.tex` in your preferred LaTeX editor.
+## For editing the CV
+
+### Build
+
+The document is built with LuaLaTeX. With `latexmk` installed, run this from
+the repository root:
 
 ```bash
-git clone https://github.com/KaiduY/paper-template.git
-cd paper-template
+latexmk -lualatex -outdir=out main.tex
 ```
 
-Compile with your preferred LaTeX toolchain, e.g.
+The generated PDF will be written to `out/main.pdf`. In VS Code, the
+repository's LaTeX Workshop configuration uses the same build command.
 
-```bash
-latexmk -pdf main.tex
-```
+### Source and formatting
 
-Alternatively, the project can be opened directly in **VS Code** with the LaTeX Workshop extension.
+- `main.tex` configures the document and includes the CV sections.
+- `cv/` contains the content, split into one `.tex` file per section.
+- `russell.cls` and `style.sty` provide the CV class and custom styling.
+- `fonts/` contains the fonts used by the document.
 
-## ✏️ Writing
-
-Most of the paper should be written in `main.tex` or in files included from it.
-
-Custom notation, commands, and formatting should be placed in:
-
-```text
-style.sty
-```
-
-References should be added to:
-
-```text
-ref.bib
-```
-
-and cited normally in LaTeX:
-
-```latex
-\cite{Author2026}
-```
-
-## 📚 Recommended Workflow
-
-1. Copy the template for a new paper.
-2. Update the title, authors, and metadata in `main.tex`.
-3. Write the paper and add figures as needed.
-4. Add references to `ref.bib`.
-5. Keep reusable mathematical notation in `style.sty`.
-6. Compile with `latexmk`.
-7. Keep generated files in `out/` rather than committing them unnecessarily.
-
-## 📝 Notes
-
-The template is intentionally kept general so that it can be adapted to different mathematics and physics projects.
-
-**Repository:** [KaiduY/paper-template](https://github.com/KaiduY/paper-template?utm_source=chatgpt.com)
+The page is A4 with an 11 pt base font. Page margins, accent color, header,
+footer, and section order are configured in `main.tex`. Edit the relevant
+section files in `cv/` to update the CV content, and adjust `main.tex` to
+change the layout or which sections are included.

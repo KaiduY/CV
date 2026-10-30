@@ -1,8 +1,10 @@
 !.gitignore
 /out/*
+!/out/main.pdf
 /papers/*
 /private/*
 !out/.gitkeep 
 !papers/.gitkeep 
 !private/.gitkeep 
 *.DS_Store
+*.log
